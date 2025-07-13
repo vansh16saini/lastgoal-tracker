@@ -12,7 +12,7 @@ export default function LoginPage() {
       console.error("Login failed:", err);
     }
   };
-
+  
   return (
     <main className="h-screen flex flex-col items-center justify-center bg-gray-100">
       <h1 className="text-4xl font-bold mb-6 text-gray-800">Welcome to LastGoal</h1>
