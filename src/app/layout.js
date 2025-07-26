@@ -1,7 +1,7 @@
 // src/app/layout.js
 import '../styles/globals.css';
 import { Inter } from "next/font/google";
-//import AuthProvider from "@/components/AuthProvider"; // ✅ Make sure this is correct path
+import AuthProvider from "@/components/Authprovider"; // <-- UNCOMMENT THIS LINE
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <AuthProvider> {/* <-- WRAP CHILDREN WITH AUTHPROVIDER */}
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

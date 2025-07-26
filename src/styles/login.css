@@ -80,3 +80,48 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* styles/login.css */
+
+/* ... existing styles ... */
+
+.google-login-button {
+  /* ... existing styles like background, color, padding, border-radius ... */
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center content horizontally */
+  gap: 10px; /* Space between the icon and text */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem; /* Adjust as needed */
+  padding: 12px 24px; /* Adjust padding */
+  min-width: 250px; /* Give it a consistent width */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+  border: none; /* Remove default button border */
+  border-radius: var(--border-radius-lg); /* Use your variable */
+  background-color: var(--color-google-blue); /* Assuming you define this */
+  color: white;
+  font-weight: 600;
+}
+
+.google-login-button:hover {
+    background-color: var(--color-google-blue-dark); /* Darker on hover */
+}
+
+.google-login-button:disabled {
+    background-color: var(--color-gray-dark);
+    cursor: not-allowed;
+}
+
+.google-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  vertical-align: middle; /* Align with text */
+}
+
+/* Define custom colors in your root or :root if you haven't already */
+:root {
+  --color-google-blue: #4285F4;
+  --color-google-blue-dark: #357ae8;
+  --color-gray-dark: #a0aec0; /* Example for disabled state */
+  /* ... other colors ... */
+}
