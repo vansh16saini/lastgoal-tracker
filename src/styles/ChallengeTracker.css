@@ -1,0 +1,91 @@
+/* styles/ChallengeTracker.css */
+
+.challenge-container {
+  /* background-color: #e0f2fe; Remove as it will be within a .card */
+  padding: 24px; /* Consistent padding */
+  border-radius: 12px; /* Match card radius */
+  /* margin: 24px 0; Removed as the parent .card provides spacing */
+  font-family: 'Inter', sans-serif; /* Consistent font */
+  display: flex; /* Flex container for content */
+  flex-direction: column;
+  gap: 16px; /* Spacing between elements */
+}
+
+.challenge-title {
+  font-size: 1.25rem; /* Larger and more prominent */
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 8px; /* Adjust spacing */
+}
+
+.challenge-description {
+    font-size: 0.95rem;
+    color: var(--color-text-medium);
+    margin-bottom: 12px;
+}
+
+.progress-bar-wrapper {
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+  background-color: var(--color-border); /* Lighter background for progress bar */
+  height: 18px; /* Slightly taller */
+  border-radius: 9px; /* Half of height for perfect pill shape */
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* For text overlay */
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-success); /* Use success color */
+  border-radius: 9px;
+  transition: width 0.5s ease-in-out; /* Slower, smoother transition */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align text to the right inside the fill */
+  padding-right: 10px;
+}
+
+.progress-percent {
+  font-size: 0.9rem; /* Smaller, clearer percentage */
+  color: var(--color-text-dark); /* Dark text for contrast */
+  font-weight: 600;
+  text-align: right;
+  margin-top: 0; /* No margin-top if inside fill */
+  position: absolute; /* Position over the bar */
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Adjust progress-percent for when fill is too small to show text inside */
+.progress-bar-fill[data-progress-small] .progress-percent {
+    color: var(--color-text-dark); /* Keep dark outside */
+    left: calc(var(--progress-width) + 10px); /* Position it next to the bar */
+    right: auto;
+    text-align: left;
+}
+
+
+.button-group {
+  display: flex;
+  gap: 16px; /* More space between buttons */
+  margin-top: 16px; /* Space above buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.btn-track-challenge { /* Specific button for tracking */
+  background-color: var(--color-primary); /* Use primary color */
+}
+.btn-track-challenge:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-reset-challenge { /* Specific button for resetting */
+    background-color: var(--color-danger); /* Use danger color */
+}
+.btn-reset-challenge:hover {
+    background-color: var(--color-danger-dark);
+}

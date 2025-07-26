@@ -1,0 +1,64 @@
+/* styles/Calendar.css */
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Adjust as needed, less min-height if it's within a card */
+  /* background-color: #f9fafb;  Remove if it's within a .card */
+  padding: 1.5rem; /* Consistent padding */
+}
+
+.rdp {
+  --rdp-accent-color: var(--color-primary); /* Use primary color */
+  --rdp-background-color: var(--color-background-card); /* Card background */
+  --rdp-cell-size: 44px; /* Slightly larger cells for easier tapping */
+  font-size: 1rem; /* Base font size */
+  background-color: var(--color-background-card);
+  border-radius: 12px; /* Match card border-radius */
+  box-shadow: none; /* Let the parent .card handle shadow */
+  padding: 20px; /* Internal padding for the calendar component itself */
+}
+
+.rdp-caption_label {
+  font-size: 1.8rem !important; /* Larger month and year */
+  font-weight: 700; /* Bolder */
+  text-align: center;
+  color: var(--color-text-dark);
+}
+
+.rdp-nav_button {
+    color: var(--color-text-medium) !important;
+    transition: color 0.2s ease;
+}
+
+.rdp-nav_button:hover {
+    color: var(--color-primary) !important;
+    background-color: var(--color-background-light) !important;
+}
+
+.rdp-day {
+    color: var(--color-text-dark);
+    border-radius: 8px; /* Slightly rounded for individual days */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.rdp-day:hover {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    border-radius: 8px;
+}
+
+.rdp-day_today {
+    font-weight: 700 !important;
+    color: var(--color-primary) !important;
+}
+
+.rdp-day_selected:not(.rdp-day_outside) {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    border-radius: 50%;
+}
+.rdp-day_selected:hover {
+    background-color: var(--color-primary-dark) !important;
+}

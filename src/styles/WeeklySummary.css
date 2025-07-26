@@ -1,0 +1,66 @@
+/* styles/WeeklySummary.css */
+
+.weekly-summary-container {
+  /* background-color: white; Remove, parent .card handles background */
+  padding: 24px; /* Consistent padding */
+  border-radius: 12px; /* Match card radius */
+  /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); Removed, parent .card handles shadow */
+  /* margin-top: 24px; Removed, parent dashboard-container handles spacing */
+  font-family: 'Inter', sans-serif; /* Consistent font */
+}
+
+.weekly-title {
+  font-size: 1.5rem; /* More prominent title */
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 20px; /* More space below title */
+  text-align: center;
+}
+
+.weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); /* Slightly wider min width */
+  gap: 15px; /* More space between days */
+  text-align: center;
+}
+
+.day-box {
+  border: 1px solid var(--color-border); /* Use border variable */
+  border-radius: 8px; /* Slightly more rounded */
+  padding: 15px; /* More padding */
+  background-color: var(--color-background-light); /* Lighter background for day box */
+  display: flex; /* Flex for content centering */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease; /* Smooth transition on hover/active */
+}
+
+.day-box:hover {
+    transform: translateY(-3px); /* Subtle lift */
+    box-shadow: 0 4px 10px var(--color-shadow-light);
+    border-color: var(--color-primary); /* Highlight border on hover */
+}
+
+.day-name {
+  font-weight: 600; /* Bolder day names */
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 5px; /* Space below name */
+}
+
+.goal-count {
+  font-size: 1.2rem; /* Larger count for prominence */
+  font-weight: 700;
+  color: var(--color-primary); /* Use primary color for count */
+}
+
+.day-box.has-goals {
+    background-color: #d1fae5; /* Very light green for days with goals */
+    border-color: var(--color-success); /* Green border */
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1); /* Subtle green shadow */
+}
+
+.day-box.has-goals .goal-count {
+    color: var(--color-success-dark); /* Darker green for count on active days */
+}

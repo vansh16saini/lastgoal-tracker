@@ -1,0 +1,150 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* ...rest of your body styles */
+}
+:root {
+  --color-primary: #3b82f6; /* A slightly more vibrant blue */
+  --color-primary-dark: #2563eb; /* Darker for hover states */
+  --color-success: #10b981; /* A friendly green */
+  --color-success-dark: #059669; /* Darker green for hover */
+  --color-danger: #ef4444; /* Red for logout/delete */
+  --color-danger-dark: #dc2626;
+
+  --color-background-light: #f8fafc; /* Very light background */
+  --color-background-card: #ffffff; /* White for cards */
+  --color-border: #e2e8f0; /* Light gray border */
+  --color-text-dark: #1e293b; /* Dark charcoal for main text */
+  --color-text-medium: #475569; /* Medium gray for secondary text */
+  --color-text-light: #64748b; /* Lighter gray for minor details */
+  --color-shadow-light: rgba(0, 0, 0, 0.08);
+  --color-shadow-medium: rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Recommend Google Font: Inter */
+  margin: 0;
+  padding: 0;
+  background: var(--color-background-light);
+  color: var(--color-text-dark); /* Apply dark text globally */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Remove redundant dashboard-container from here.
+   It should only be in dashboard.css */
+.dashboard-container {
+    /* This rule should be removed from globals.css */
+    /* It conflicts with the more specific one in dashboard.css */
+    /* and is less descriptive of a global container */
+}
+
+
+.card {
+  background-color: var(--color-background-card);
+  border-radius: 12px; /* Slightly more rounded corners */
+  padding: 24px; /* More generous padding */
+  box-shadow: 0 4px 15px var(--color-shadow-light); /* Softer, larger shadow */
+  border: 1px solid var(--color-border); /* Subtle border for definition */
+}
+
+.section-title {
+  font-size: 1.5rem; /* Make titles more prominent */
+  font-weight: 700; /* Bolder */
+  margin-bottom: 20px; /* More space below titles */
+  color: var(--color-text-dark);
+  border-bottom: 2px solid var(--color-border); /* Subtle separator */
+  padding-bottom: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  background: var(--color-text-dark); /* Dark tooltip background */
+  color: var(--color-background-card); /* White text */
+  border: none; /* No border needed with dark background */
+  border-radius: 6px;
+  padding: 8px 12px; /* Slightly more padding */
+  font-size: 0.8rem; /* Slightly smaller font for tooltips */
+  box-shadow: 0 2px 8px var(--color-shadow-medium);
+  white-space: nowrap; /* Prevent wrapping for simple tooltips */
+}
+
+/* Highlight calendar days */
+.rdp-day_goal {
+  background-color: var(--color-success) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+.rdp-day_goal:hover {
+    background-color: var(--color-success-dark) !important;
+}
+
+/* General Button Styles (can be extended) */
+.btn {
+    padding: 12px 20px; /* More padding for buttons */
+    border: none;
+    border-radius: 8px; /* Slightly more rounded buttons */
+    color: white;
+    cursor: pointer;
+    font-weight: 600; /* Bolder text */
+    font-size: 1rem; /* Consistent font size */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* Smooth transitions */
+    display: inline-flex; /* For potential icons */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 4px 8px var(--color-shadow-light);
+}
+
+.btn:active {
+    transform: translateY(0); /* Press effect */
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: var(--color-primary);
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Success Button (for adding/confirming) */
+.btn-success {
+    background-color: var(--color-success);
+}
+.btn-success:hover {
+    background-color: var(--color-success-dark);
+}
+
+/* Danger Button (for logout/delete) */
+.btn-danger {
+    background-color: var(--color-danger);
+}
+.btn-danger:hover {
+    background-color: var(--color-danger-dark);
+}
+
+/* Input Field Styles */
+.input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-card);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Focus ring */
+}

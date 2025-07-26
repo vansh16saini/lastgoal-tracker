@@ -1,0 +1,132 @@
+/* styles/GoalForm.css */
+
+.goal-form {
+  /* margin-top: 1rem; Removed, parent .card handles spacing */
+  /* background-color: #f3f4f6; Removed, parent .card handles background */
+  padding: 24px; /* Consistent padding */
+  border-radius: 12px; /* Match card radius */
+  display: flex; /* Use flexbox for form layout */
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+}
+
+.goal-form h3 {
+  font-size: 1.5rem; /* More prominent title */
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 15px; /* Adjust spacing */
+  text-align: center;
+}
+
+.goal-input-group {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+}
+
+.goal-input {
+    flex-grow: 1; /* Input takes up available space */
+    padding: 12px 15px; /* Use global input styles */
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-card);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.goal-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.add-goal-button {
+    /* Use global primary button styles */
+    padding: 12px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-goal-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+
+.goal-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px; /* Space above list */
+}
+
+.goal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0; /* More vertical padding */
+  border-bottom: 1px dashed var(--color-border); /* Dashed separator */
+  font-size: 1.05rem;
+  color: var(--color-text-dark);
+  transition: background-color 0.2s ease;
+}
+
+.goal-item:last-child {
+    border-bottom: none; /* No border on last item */
+}
+
+.goal-text {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.goal-text.done {
+    text-decoration: line-through;
+    color: var(--color-text-light); /* Lighter color for done goals */
+    font-style: italic;
+}
+
+.goal-actions {
+    display: flex;
+    gap: 8px; /* Space between action buttons */
+}
+
+.goal-button {
+  padding: 8px 14px; /* Smaller padding for individual goal buttons */
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.goal-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px var(--color-shadow-light);
+}
+
+.goal-button.done {
+  background-color: var(--color-success); /* Use success color */
+}
+.goal-button.done:hover {
+  background-color: var(--color-success-dark);
+}
+
+.goal-button.mark {
+  background-color: var(--color-primary); /* Use primary for "mark as pending" or similar */
+}
+.goal-button.mark:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.goal-button.delete { /* New delete button style */
+    background-color: var(--color-danger);
+}
+.goal-button.delete:hover {
+    background-color: var(--color-danger-dark);
+}

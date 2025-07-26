@@ -1,14 +1,16 @@
-// src/app/page.js
-"use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+// app/page.js
+'use client';
 
-export default function Home() {
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function HomePage() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push("/login");
-  }, [router]);
+    // Redirect to the login page on initial load
+    router.push('/login');
+  }, [router]); // Added router to dependency array for best practice
 
-  return null; // or loading spinner later
+  return null; // This page doesn't render anything
 }

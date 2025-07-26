@@ -1,0 +1,56 @@
+/* styles/dashboard.css */
+
+.dashboard-container {
+  max-width: 1200px; /* Slightly wider for more content */
+  margin: 0 auto;
+  padding: 3rem 2rem; /* More vertical padding */
+  font-family: 'Inter', sans-serif; /* Use consistent font */
+  background-color: var(--color-background-light); /* Use global var */
+  min-height: 100vh;
+  display: flex; /* Use flexbox for overall layout */
+  flex-direction: column;
+  gap: 30px; /* Spacing between sections */
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem; /* More space below header */
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border); /* Subtle separation */
+}
+
+.user-info {
+  font-size: 1.1rem; /* Slightly larger for prominence */
+  color: var(--color-text-medium); /* Softer text color */
+  font-weight: 500;
+}
+
+.section {
+  /* This rule will be largely replaced by .card from globals.css */
+  /* Make sure your dashboard/page.js applies the .card class */
+  /* If you still need section-specific styles, keep them. */
+  /* Example: padding: 1.5rem; box-shadow: 0 6px 20px var(--color-shadow-medium); */
+}
+
+.logout-button {
+  /* Use the new global button styles */
+  /* In dashboard/page.js, change class to `btn btn-danger` */
+  /* Remove specific styles from here if global .btn-danger is sufficient */
+  background-color: var(--color-danger); /* Use variable */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem; /* Match new button padding */
+  font-size: 1rem;
+  border-radius: 8px; /* Match global button border-radius */
+  cursor: pointer;
+  transition: all 0.2s ease; /* Smooth transition */
+  font-weight: 600;
+}
+
+.logout-button:hover {
+  background-color: var(--color-danger-dark); /* Use variable */
+  transform: translateY(-1px); /* Subtle lift */
+  box-shadow: 0 3px 6px var(--color-shadow-light);
+}
